@@ -8,6 +8,7 @@ import { AdminComponent } from './admin/admin.component';
 import { NotAccessComponent } from './not-access/not-access.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SignupComponent } from './signup/signup.component';
+import { NoAccessComponent } from './no-access/no-access.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SignupComponent } from './signup/signup.component';
     AdminComponent,
     NotAccessComponent,
     NotFoundComponent,
-    SignupComponent
+    SignupComponent,
+    NoAccessComponent
   ],
   imports: [
     BrowserModule

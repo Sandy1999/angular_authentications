@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NotAccessComponent } from './not-access.component';
+import { NoAccessComponent } from './no-access.component';
 
-describe('NotAccessComponent', () => {
-  let component: NotAccessComponent;
-  let fixture: ComponentFixture<NotAccessComponent>;
+describe('NoAccessComponent', () => {
+  let component: NoAccessComponent;
+  let fixture: ComponentFixture<NoAccessComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NotAccessComponent ]
+      declarations: [ NoAccessComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NotAccessComponent);
+    fixture = TestBed.createComponent(NoAccessComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
