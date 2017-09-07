@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
 
   constructor(private _authService:AuthService, private router:Router) { }
-  
+  isLogedIn=this._authService.isLoggedin()
   logout(){
     this._authService.logout()
   }
