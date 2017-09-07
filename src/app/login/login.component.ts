@@ -17,8 +17,8 @@ export class LoginComponent implements OnInit {
   signIn(credentials){
     this._authService.login(credentials)
     .subscribe(result=>{
-      if(result)
-        this.router.navigate['/'];
+      if(result==true)
+        this.router.navigate(['/']);
       else
         this.invalidLogin;
     });

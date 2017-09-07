@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
+
 
 @Injectable()
 export class AuthService {
@@ -7,10 +9,21 @@ export class AuthService {
   constructor(private _http:Http) { }
   
   login(credentials){
-    return this._http.post('/api/authenticate',JSON.stringify(credentials));
+    return this._http.post('/api/authenticate',JSON.stringify(credentials))
+    .map(res=>{
+      let result = res.json();
+      if(result && result.token){
+        localStorage.setItem('token',result.token);
+        return true;
+      }
+
+      return false;
+    });
   }
 
-  logout(){}
+  logout(){
+    localStorage.removeItem('token');
+  }
 
   isLoggedin(){
     return false;
