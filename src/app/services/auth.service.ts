@@ -23,7 +23,6 @@ export class AuthService {
 
   logout(){
     localStorage.removeItem('token');
-    this.isLoggedin();
   }
 
   isLoggedin(){

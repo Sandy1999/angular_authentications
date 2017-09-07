@@ -5,8 +5,8 @@
     <div class="navbar">
       <ul class="nav nav-bar">
         <li *ngIf="isLogedIn"><a [routerLink]="['/admin']">Admin</a></li>
-        <li><a [routerLink]="['/login']">Login</a></li>
-        <li *ngIf="isLogedIn"><a (click)="logout()">LogOut</a></li>
+        <li *ngIf="!isLogedIn"><a [routerLink]="['/login']">Login</a></li>
+        <li *ngIf="isLogedIn"><a (click)="logout()">Logout</a></li>
       </ul>
     </div>
   </div>
